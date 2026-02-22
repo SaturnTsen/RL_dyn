@@ -1,3 +1,5 @@
 .env
 __pycache__
 data/
+raw_data/
+*.npy
