@@ -1,10 +1,12 @@
+import os
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
 import random
 from collections import deque
-from utils import normalize_obs, process_reward
+from src.modules import DuelingDQN, ReplayBuffer
+from src.utils import set_seed, normalize_obs, process_reward, 
 from student_client import create_student_gym_env
 import joblib
 import logging
@@ -13,7 +15,40 @@ import logging
 logging.basicConfig(filename='train_log.txt', level=logging.INFO, format='%(asctime)s %(message)s')
 
 # 加载 predictor
-health_predictor = joblib.load('data/linear.joblib')
+health_predictor = joblib.load('checkpoints/linear.joblib')
+    
+def warmup_replay_buffer(env, buffer, num_episodes=50, max_steps=300):
+    def strong_policy(obs, repair_cnt):
+        prob = health_predictor.predict_proba(obs)[0, 1]
+        # prob是 0 1 2 轮死掉的概率，越大越不健康
+        if prob >= 0.4:
+            if repair_cnt < 4:
+                return 1 # repair
+            else:
+                return 2 # 卖掉
+        else:
+            return 0 # do nothing
+    print(f"[Warmup] Collecting {num_episodes} episodes with strong policy...")
+    for ep in range(num_episodes):
+        obs, info = env.reset()
+        obs = normalize_obs(np.array(obs, dtype=np.float32))
+        done = False
+        t = 0
+        repair_cnt = 0
+        while not done and t < max_steps:
+            action = strong_policy(obs, repair_cnt)
+            if action == 1:
+                repair_cnt += 1
+            next_obs, reward, terminated, truncated, info = env.step(action)
+            reward = process_reward(reward)
+            next_obs = normalize_obs(np.array(next_obs, dtype=np.float32))
+            done = terminated or truncated
+            buffer.push(obs, action, reward, next_obs, done)
+            obs = next_obs
+            t += 1
+        print(f"[Warmup] Episode {ep+1}/{num_episodes}, steps={t}")
+    print(f"[Warmup] Buffer size after warmup: {len(buffer)}")
+
 
 def predictor_guided_epsilon_greedy(obs, q_values, epsilon=0.6, danger_threshold=0.4):
     if np.random.rand() > epsilon:
@@ -31,91 +66,13 @@ def predictor_guided_epsilon_greedy(obs, q_values, epsilon=0.6, danger_threshold
             probs = np.array([0.05, 0.70, 0.25])  # 极高风险才明显提高卖掉
         return int(np.random.choice([0,1,2], p=probs))
 
-class DuelingDQN(nn.Module):
-    def __init__(self, obs_dim, act_dim):
-        super().__init__()
-        self.feature = nn.Sequential(
-            nn.Linear(obs_dim, 128),
-            nn.ReLU(),
-        )
-        self.value_stream = nn.Sequential(
-            nn.Linear(128, 64),
-            nn.ReLU(),
-            nn.Linear(64, 1)
-        )
-        self.advantage_stream = nn.Sequential(
-            nn.Linear(128, 64),
-            nn.ReLU(),
-            nn.Linear(64, act_dim)
-        )
-    def forward(self, x):
-        feat = self.feature(x)
-        value = self.value_stream(feat)
-        adv = self.advantage_stream(feat)
-        q = value + adv - adv.mean(dim=1, keepdim=True)
-        return q
-
-class ReplayBuffer:
-    def __init__(self, capacity=10000):
-        self.buffer = deque(maxlen=capacity)
-
-    def save(self, path):
-        import pickle
-        with open(path, 'wb') as f:
-            pickle.dump(list(self.buffer), f)
-
-    def load(self, path):
-        import pickle
-        with open(path, 'rb') as f:
-            data = pickle.load(f)
-            self.buffer = deque(data, maxlen=self.buffer.maxlen)
-
-    def push(self, s, a, r, s_, d):
-        # 强约束：外部必须传 (1, 9)
-        assert isinstance(s, np.ndarray) and isinstance(s_, np.ndarray)
-        assert s.shape == (1, 9), f"s shape must be (1, 9), got {s.shape}"
-        assert s_.shape == (1, 9), f"s_ shape must be (1, 9), got {s_.shape}"
-
-        # buffer 内部仍然存 (1, 9)
-        self.buffer.append((s, int(a), float(r), s_, bool(d)))
-
-    def sample(self, batch_size):
-        idx = np.random.choice(len(self.buffer), batch_size, replace=False)
-        s, a, r, s_, d = zip(*[self.buffer[i] for i in idx])
-
-        # s: (batch, 1, 9) -> (batch, 9)
-        s = np.concatenate(s, axis=0)
-        s_ = np.concatenate(s_, axis=0)
-
-        # 最终强校验
-        assert s.shape == (batch_size, 9), f"s shape wrong: {s.shape}"
-        assert s_.shape == (batch_size, 9), f"s_ shape wrong: {s_.shape}"
-
-        return (
-            s,
-            np.asarray(a, dtype=np.int64),
-            np.asarray(r, dtype=np.float32),
-            s_,
-            np.asarray(d, dtype=np.uint8),
-        )
-
-    def __len__(self):
-        return len(self.buffer)
-
-def set_seed(seed=42):
-    np.random.seed(seed)
-    random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
-
-from dotenv import load_dotenv
-
 if __name__ == '__main__':
+    from dotenv import load_dotenv
+    
     set_seed(42)
     load_dotenv()
     env = create_student_gym_env()
-    obs_dim = env.observation_space.shape[0]
+    obs_dim = 9
     act_dim = env.action_space.n
     buffer = ReplayBuffer(2000)
     device = torch.device('cpu')
@@ -128,29 +85,31 @@ if __name__ == '__main__':
     def sync_target():
         target_net.load_state_dict(policy_net.state_dict())
 
-    num_episodes = 300
+    num_episodes = 3000
     batch_size = 64
     gamma = 0.999
     target_update = 20
-    epsilon_start = 0.95
+    epsilon_start = 0.6
     epsilon_end = 0.05
     epsilon_decay = 200
 
-    import os
     resume_checkpoint = os.environ.get('RESUME_CKPT', None)
-    resume_buffer = os.environ.get('RESUME_BUFFER', None)
+
     start_ep = 0
+    
     if resume_checkpoint and os.path.exists(resume_checkpoint):
-        checkpoint = torch.load(resume_checkpoint, map_location=device)
+        checkpoint = torch.load(resume_checkpoint, map_location=device, weights_only=False)
         policy_net.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-        start_ep = checkpoint.get('epoch', 1)
+        buffer.load(checkpoint['buffer_path'])
+        start_ep = checkpoint['epoch']
         print(f"Resumed model/optimizer from {resume_checkpoint}, start from episode {start_ep}")
-    if resume_buffer and os.path.exists(resume_buffer):
-        buffer.load(resume_buffer)
-        print(f"Resumed buffer from {resume_buffer}, size={len(buffer)}")
+    else:
+        warmup_replay_buffer(env, buffer, num_episodes=200)
 
-    for ep in range(start_ep, num_episodes):
+
+
+    for ep in range(num_episodes):
         try:
             obs, info = env.reset()
         except Exception as e:
@@ -162,30 +121,42 @@ if __name__ == '__main__':
         total_reward = 0
         done = False
         t = 0
+        step_logs = []
         while not done:
             epsilon = epsilon_end + (epsilon_start - epsilon_end) * np.exp(-1. * ep / epsilon_decay)
+
             # Obs
             with torch.no_grad():
                 obs_tensor = torch.tensor(obs, dtype=torch.float32, device=device)
                 q_values = policy_net(obs_tensor).cpu().numpy()[0]
+
             # Action
             action = predictor_guided_epsilon_greedy(obs, q_values, epsilon=epsilon)
+
             try:
                 next_obs, reward, terminated, truncated, info = env.step(action)
             except Exception as e:
                 logging.error(f"Step failed at episode {ep+1}, step {t}: {e}")
                 print(f"Step failed at episode {ep+1}, step {t}: {e}")
                 break
+
             # Reward
             reward = process_reward(reward)
             next_obs = normalize_obs(np.array(next_obs, dtype=np.float32))
             done = terminated or truncated
+
             # Store transition
             buffer.push(obs, action, reward, next_obs, done)
-            print(f"    Step {t}, Action: {action}, Epsilon: {epsilon:.3f}, Reward: {reward:.2f}, Done: {done}")
+
+            step_log = f"Episode {ep+1}, Step {t}, Action: {action}, Epsilon: {epsilon:.3f}, Reward: {reward:.2f}, Done: {done}"
+            step_logs.append(step_log)
+            logging.info(step_log)
+            print(f"    {step_log}")
+
             # Update
             obs = next_obs
             total_reward += reward
+
             # Train
             t += 1
             if len(buffer) >= batch_size:
@@ -205,14 +176,18 @@ if __name__ == '__main__':
                 optimizer.step()
         if ep % target_update == 0:
             sync_target()
+        
         # 保存模型和优化器
         torch.save({
             'epoch': ep + 1,
             'model_state_dict': policy_net.state_dict(),
             'optimizer_state_dict': optimizer.state_dict(),
             'reward': total_reward,
-            'epsilon': epsilon
-        }, f'checkpoint_ep{ep+1}.pth')
-        buffer.save(f'buffer_ep{ep+1}.pkl')
-        logging.info(f"Episode {ep+1}, Reward: {total_reward:.2f}, Epsilon: {epsilon:.3f}")
-        print(f"Episode {ep+1}, Reward: {total_reward:.2f}, Epsilon: {epsilon:.3f}")
+            'epsilon': epsilon,
+            'buffer_path': f'checkpoints/DDQN_bufferwarmup/buffer_ep{ep+1}.pkl'
+        }, f'checkpoints/DDQN_bufferwarmup/buffer_warmup_checkpoint_ep{ep+1}.pth')
+        buffer.save(f'checkpoints/DDQN_bufferwarmup/buffer_ep{ep+1}.pkl')
+
+        episode_log = f"Episode {ep+1} finished, Total Reward: {total_reward:.2f}, Steps: {t}, Epsilon: {epsilon:.3f}"
+        logging.info(episode_log)
+        print(episode_log)

@@ -4,3 +4,4 @@ data/
 raw_data/
 *.npy
 *.pth
+checkpoints/

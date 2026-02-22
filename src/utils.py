@@ -1,8 +1,18 @@
+import random
+from random import random
 import numpy as np
 import os
 import sys
+import torch
 import numpy as np
-sys.path.append('./src')
+
+def set_seed(seed=42):
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
 
 def period_aggregate(obs, period=10, agg="mean"):
     """
