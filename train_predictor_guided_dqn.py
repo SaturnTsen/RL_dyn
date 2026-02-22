@@ -59,6 +59,17 @@ class ReplayBuffer:
     def __init__(self, capacity=10000):
         self.buffer = deque(maxlen=capacity)
 
+    def save(self, path):
+        import pickle
+        with open(path, 'wb') as f:
+            pickle.dump(list(self.buffer), f)
+
+    def load(self, path):
+        import pickle
+        with open(path, 'rb') as f:
+            data = pickle.load(f)
+            self.buffer = deque(data, maxlen=self.buffer.maxlen)
+
     def push(self, s, a, r, s_, d):
         # 强约束：外部必须传 (1, 9)
         assert isinstance(s, np.ndarray) and isinstance(s_, np.ndarray)
@@ -125,7 +136,21 @@ if __name__ == '__main__':
     epsilon_end = 0.05
     epsilon_decay = 200
 
-    for ep in range(num_episodes):
+    import os
+    resume_checkpoint = os.environ.get('RESUME_CKPT', None)
+    resume_buffer = os.environ.get('RESUME_BUFFER', None)
+    start_ep = 0
+    if resume_checkpoint and os.path.exists(resume_checkpoint):
+        checkpoint = torch.load(resume_checkpoint, map_location=device)
+        policy_net.load_state_dict(checkpoint['model_state_dict'])
+        optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        start_ep = checkpoint.get('epoch', 1)
+        print(f"Resumed model/optimizer from {resume_checkpoint}, start from episode {start_ep}")
+    if resume_buffer and os.path.exists(resume_buffer):
+        buffer.load(resume_buffer)
+        print(f"Resumed buffer from {resume_buffer}, size={len(buffer)}")
+
+    for ep in range(start_ep, num_episodes):
         try:
             obs, info = env.reset()
         except Exception as e:
@@ -134,42 +159,33 @@ if __name__ == '__main__':
             continue
 
         obs = normalize_obs(np.array(obs, dtype=np.float32))
-        
         total_reward = 0
         done = False
         t = 0
         while not done:
             epsilon = epsilon_end + (epsilon_start - epsilon_end) * np.exp(-1. * ep / epsilon_decay)
-            
             # Obs
             with torch.no_grad():
                 obs_tensor = torch.tensor(obs, dtype=torch.float32, device=device)
                 q_values = policy_net(obs_tensor).cpu().numpy()[0]
-            
             # Action
             action = predictor_guided_epsilon_greedy(obs, q_values, epsilon=epsilon)
-            
             try:
                 next_obs, reward, terminated, truncated, info = env.step(action)
             except Exception as e:
                 logging.error(f"Step failed at episode {ep+1}, step {t}: {e}")
                 print(f"Step failed at episode {ep+1}, step {t}: {e}")
                 break
-            
             # Reward
             reward = process_reward(reward)
             next_obs = normalize_obs(np.array(next_obs, dtype=np.float32))
             done = terminated or truncated
-
             # Store transition
             buffer.push(obs, action, reward, next_obs, done)
-            
             print(f"    Step {t}, Action: {action}, Epsilon: {epsilon:.3f}, Reward: {reward:.2f}, Done: {done}")
             # Update
             obs = next_obs
             total_reward += reward
-
-            
             # Train
             t += 1
             if len(buffer) >= batch_size:
@@ -197,5 +213,6 @@ if __name__ == '__main__':
             'reward': total_reward,
             'epsilon': epsilon
         }, f'checkpoint_ep{ep+1}.pth')
+        buffer.save(f'buffer_ep{ep+1}.pkl')
         logging.info(f"Episode {ep+1}, Reward: {total_reward:.2f}, Epsilon: {epsilon:.3f}")
         print(f"Episode {ep+1}, Reward: {total_reward:.2f}, Epsilon: {epsilon:.3f}")
