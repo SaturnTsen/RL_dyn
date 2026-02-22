@@ -1,0 +1,69 @@
+2026-02-22 09:53:50,692 - student_client.student_gym_env - INFO - Client version 0.3 is newer than latest 0.2
+2026-02-22 09:53:51,010 - student_client.student_gym_env - INFO - Created new session: 1d22d382-1bae-47c2-8db4-555196a8ccc4
+2026-02-22 09:53:57,440 - student_client.student_gym_env - INFO - Created new episode: 94b9c14e-f44c-4b3d-be62-39571c1209dd
+2026-02-22 09:53:57,441 - student_client.student_gym_env - INFO - StudentGymEnv initialized with episode 94b9c14e-f44c-4b3d-be62-39571c1209dd
+2026-02-22 09:54:06,262 - student_client.student_gym_env - INFO - Episode 94b9c14e-f44c-4b3d-be62-39571c1209dd reset successfully
+
+Starting data collection for 50 episodes...
+
+--- Episode 1/50 ---
+2026-02-22 09:54:18,575 - student_client.student_gym_env - INFO - Episode 94b9c14e-f44c-4b3d-be62-39571c1209dd reset successfully
+ Obs shape=(10, 9) Reward=488.29, Total Episode Reward=488.29
+ Obs shape=(10, 9) Reward=395.81, Total Episode Reward=884.11
+ Obs shape=(10, 9) Reward=372.38, Total Episode Reward=1256.49
+ Obs shape=(10, 9) Reward=331.97, Total Episode Reward=1588.46
+ Obs shape=(10, 9) Reward=299.49, Total Episode Reward=1887.94
+ Obs shape=(10, 9) Reward=255.20, Total Episode Reward=2143.14
+ Obs shape=(10, 9) Reward=190.65, Total Episode Reward=2333.80
+ Obs shape=(10, 9) Reward=189.40, Total Episode Reward=2523.19
+ Obs shape=(10, 9) Reward=152.45, Total Episode Reward=2675.64
+Episode 94b9c14e-f44c-4b3d-be62-39571c1209dd reached termination state, reason: failure
+ Obs shape=(2, 9) Reward=-1000.00, Total Episode Reward=1675.64
+🏁 Episode 1 ended. Total Reward: 1675.64
+
+--- Saving data after 1 episodes ---
+Data saved to collected_data/22_observations.npy, collected_data/22_rewards.npy, and collected_data/22_steps.npy
+
+--- Episode 2/50 ---
+2026-02-22 09:57:44,954 - student_client.student_gym_env - INFO - Episode 94b9c14e-f44c-4b3d-be62-39571c1209dd reset successfully
+ Obs shape=(10, 9) Reward=463.30, Total Episode Reward=463.30
+ Obs shape=(10, 9) Reward=409.29, Total Episode Reward=872.59
+ Obs shape=(10, 9) Reward=381.92, Total Episode Reward=1254.50
+ Obs shape=(10, 9) Reward=352.34, Total Episode Reward=1606.85
+ Obs shape=(10, 9) Reward=303.11, Total Episode Reward=1909.96
+ Obs shape=(10, 9) Reward=269.99, Total Episode Reward=2179.95
+ Obs shape=(10, 9) Reward=212.19, Total Episode Reward=2392.14
+ Obs shape=(10, 9) Reward=200.71, Total Episode Reward=2592.85
+ Obs shape=(10, 9) Reward=149.52, Total Episode Reward=2742.37
+ Obs shape=(10, 9) Reward=116.16, Total Episode Reward=2858.53
+ Obs shape=(10, 9) Reward=55.37, Total Episode Reward=2913.91
+Episode 94b9c14e-f44c-4b3d-be62-39571c1209dd reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=1913.91
+🏁 Episode 2 ended. Total Reward: 1913.91
+
+--- Saving data after 2 episodes ---
+Data saved to collected_data/22_observations.npy, collected_data/22_rewards.npy, and collected_data/22_steps.npy
+
+--- Episode 3/50 ---
+2026-02-22 10:01:35,012 - student_client.student_gym_env - ERROR - Failed to reset episode 94b9c14e-f44c-4b3d-be62-39571c1209dd: Server error '500 Internal Server Error' for url 'http://rlchallenge.orailix.com/api/v1/episode/reset'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+Traceback (most recent call last):
+  File "D:\Personal\Polytechnique\3A\P2\CSC581RL\Challenge\challenge_CSC_52081_EP\student_client\student_gym_env.py", line 311, in reset
+    response.raise_for_status()
+  File "C:\Users\ming\miniconda3\envs\FinRL\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://rlchallenge.orailix.com/api/v1/episode/reset'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Personal\Polytechnique\3A\P2\CSC581RL\Challenge\RL_dyn\data_collector.py", line 86, in <module>
+    main(num_episodes=args.num_episodes, save_interval=args.save_interval, save_path=args.save_path, save_id=args.save_id)
+  File "D:\Personal\Polytechnique\3A\P2\CSC581RL\Challenge\RL_dyn\data_collector.py", line 32, in main
+    obs, info = env.reset()
+                ^^^^^^^^^^^
+  File "D:\Personal\Polytechnique\3A\P2\CSC581RL\Challenge\challenge_CSC_52081_EP\student_client\student_gym_env.py", line 334, in reset
+    raise RuntimeError(f"Could not reset episode: {str(e)}")
+RuntimeError: Could not reset episode: Server error '500 Internal Server Error' for url 'http://rlchallenge.orailix.com/api/v1/episode/reset'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500

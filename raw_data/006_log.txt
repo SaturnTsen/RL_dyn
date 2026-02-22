@@ -1,0 +1,944 @@
+2026-02-22 09:25:57,814 - student_client.student_gym_env - INFO - Client version 0.3 is newer than latest 0.2
+2026-02-22 09:25:57,896 - student_client.student_gym_env - INFO - Created new session: a1a49516-eec8-44c6-96ed-e8aff895d072
+2026-02-22 09:26:00,354 - student_client.student_gym_env - INFO - Created new episode: b4b574a8-19fb-4db5-863e-dcee82cae3bb
+2026-02-22 09:26:00,354 - student_client.student_gym_env - INFO - StudentGymEnv initialized with episode b4b574a8-19fb-4db5-863e-dcee82cae3bb
+2026-02-22 09:26:02,325 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+
+Starting data collection for 50 episodes...
+
+--- Episode 1/50 ---
+2026-02-22 09:26:09,421 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=464.84, Total Episode Reward=464.84
+ Obs shape=(10, 9) Reward=446.78, Total Episode Reward=911.62
+ Obs shape=(10, 9) Reward=373.79, Total Episode Reward=1285.41
+ Obs shape=(10, 9) Reward=341.88, Total Episode Reward=1627.30
+ Obs shape=(10, 9) Reward=307.42, Total Episode Reward=1934.71
+ Obs shape=(10, 9) Reward=265.92, Total Episode Reward=2200.63
+ Obs shape=(10, 9) Reward=239.47, Total Episode Reward=2440.10
+ Obs shape=(10, 9) Reward=192.51, Total Episode Reward=2632.61
+ Obs shape=(10, 9) Reward=161.97, Total Episode Reward=2794.58
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1794.58
+🏁 Episode 1 ended. Total Reward: 1794.58
+
+--- Saving data after 1 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 2/50 ---
+2026-02-22 09:26:56,789 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=470.02, Total Episode Reward=470.02
+ Obs shape=(10, 9) Reward=414.13, Total Episode Reward=884.15
+ Obs shape=(10, 9) Reward=355.95, Total Episode Reward=1240.10
+ Obs shape=(10, 9) Reward=328.21, Total Episode Reward=1568.32
+ Obs shape=(10, 9) Reward=275.11, Total Episode Reward=1843.42
+ Obs shape=(10, 9) Reward=250.19, Total Episode Reward=2093.61
+ Obs shape=(10, 9) Reward=228.80, Total Episode Reward=2322.41
+ Obs shape=(10, 9) Reward=181.05, Total Episode Reward=2503.46
+ Obs shape=(10, 9) Reward=147.70, Total Episode Reward=2651.16
+ Obs shape=(10, 9) Reward=93.74, Total Episode Reward=2744.90
+ Obs shape=(10, 9) Reward=50.70, Total Episode Reward=2795.60
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1795.60
+🏁 Episode 2 ended. Total Reward: 1795.60
+
+--- Saving data after 2 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 3/50 ---
+2026-02-22 09:27:49,127 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=433.05, Total Episode Reward=433.05
+ Obs shape=(10, 9) Reward=408.03, Total Episode Reward=841.09
+ Obs shape=(10, 9) Reward=384.12, Total Episode Reward=1225.21
+ Obs shape=(10, 9) Reward=340.89, Total Episode Reward=1566.09
+ Obs shape=(10, 9) Reward=299.37, Total Episode Reward=1865.47
+ Obs shape=(10, 9) Reward=274.59, Total Episode Reward=2140.05
+ Obs shape=(10, 9) Reward=241.03, Total Episode Reward=2381.08
+ Obs shape=(10, 9) Reward=184.89, Total Episode Reward=2565.97
+ Obs shape=(10, 9) Reward=170.80, Total Episode Reward=2736.77
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=1736.77
+🏁 Episode 3 ended. Total Reward: 1736.77
+
+--- Saving data after 3 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 4/50 ---
+2026-02-22 09:28:40,240 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=449.49, Total Episode Reward=449.49
+ Obs shape=(10, 9) Reward=441.00, Total Episode Reward=890.49
+ Obs shape=(10, 9) Reward=386.38, Total Episode Reward=1276.87
+ Obs shape=(10, 9) Reward=348.88, Total Episode Reward=1625.75
+ Obs shape=(10, 9) Reward=316.88, Total Episode Reward=1942.63
+ Obs shape=(10, 9) Reward=275.94, Total Episode Reward=2218.56
+ Obs shape=(10, 9) Reward=225.30, Total Episode Reward=2443.86
+ Obs shape=(10, 9) Reward=202.31, Total Episode Reward=2646.17
+ Obs shape=(10, 9) Reward=155.95, Total Episode Reward=2802.12
+ Obs shape=(10, 9) Reward=134.43, Total Episode Reward=2936.55
+ Obs shape=(10, 9) Reward=75.54, Total Episode Reward=3012.08
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=2012.08
+🏁 Episode 4 ended. Total Reward: 2012.08
+
+--- Saving data after 4 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 5/50 ---
+2026-02-22 09:29:44,649 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=445.86, Total Episode Reward=445.86
+ Obs shape=(10, 9) Reward=400.87, Total Episode Reward=846.73
+ Obs shape=(10, 9) Reward=368.58, Total Episode Reward=1215.31
+ Obs shape=(10, 9) Reward=336.14, Total Episode Reward=1551.45
+ Obs shape=(10, 9) Reward=289.30, Total Episode Reward=1840.76
+ Obs shape=(10, 9) Reward=233.10, Total Episode Reward=2073.85
+ Obs shape=(10, 9) Reward=214.60, Total Episode Reward=2288.45
+ Obs shape=(10, 9) Reward=204.27, Total Episode Reward=2492.72
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(5, 9) Reward=-1000.00, Total Episode Reward=1492.72
+🏁 Episode 5 ended. Total Reward: 1492.72
+
+--- Saving data after 5 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 6/50 ---
+2026-02-22 09:30:34,723 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=468.60, Total Episode Reward=468.60
+ Obs shape=(10, 9) Reward=397.79, Total Episode Reward=866.39
+ Obs shape=(10, 9) Reward=384.54, Total Episode Reward=1250.93
+ Obs shape=(10, 9) Reward=328.84, Total Episode Reward=1579.77
+ Obs shape=(10, 9) Reward=295.08, Total Episode Reward=1874.85
+ Obs shape=(10, 9) Reward=236.38, Total Episode Reward=2111.23
+ Obs shape=(10, 9) Reward=233.18, Total Episode Reward=2344.41
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(2, 9) Reward=-1000.00, Total Episode Reward=1344.41
+🏁 Episode 6 ended. Total Reward: 1344.41
+
+--- Saving data after 6 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 7/50 ---
+2026-02-22 09:31:26,436 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=436.16, Total Episode Reward=436.16
+ Obs shape=(10, 9) Reward=402.04, Total Episode Reward=838.20
+ Obs shape=(10, 9) Reward=380.48, Total Episode Reward=1218.68
+ Obs shape=(10, 9) Reward=314.74, Total Episode Reward=1533.42
+ Obs shape=(10, 9) Reward=308.56, Total Episode Reward=1841.98
+ Obs shape=(10, 9) Reward=268.79, Total Episode Reward=2110.77
+ Obs shape=(10, 9) Reward=221.58, Total Episode Reward=2332.36
+ Obs shape=(10, 9) Reward=170.39, Total Episode Reward=2502.75
+ Obs shape=(10, 9) Reward=149.07, Total Episode Reward=2651.82
+ Obs shape=(10, 9) Reward=120.21, Total Episode Reward=2772.03
+ Obs shape=(10, 9) Reward=90.48, Total Episode Reward=2862.51
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1862.51
+🏁 Episode 7 ended. Total Reward: 1862.51
+
+--- Saving data after 7 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 8/50 ---
+2026-02-22 09:32:37,507 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=467.98, Total Episode Reward=467.98
+ Obs shape=(10, 9) Reward=431.01, Total Episode Reward=898.99
+ Obs shape=(10, 9) Reward=367.36, Total Episode Reward=1266.35
+ Obs shape=(10, 9) Reward=321.51, Total Episode Reward=1587.86
+ Obs shape=(10, 9) Reward=320.17, Total Episode Reward=1908.03
+ Obs shape=(10, 9) Reward=276.95, Total Episode Reward=2184.98
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1184.98
+🏁 Episode 8 ended. Total Reward: 1184.98
+
+--- Saving data after 8 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 9/50 ---
+2026-02-22 09:33:21,840 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=457.40, Total Episode Reward=457.40
+ Obs shape=(10, 9) Reward=406.50, Total Episode Reward=863.91
+ Obs shape=(10, 9) Reward=362.00, Total Episode Reward=1225.91
+ Obs shape=(10, 9) Reward=319.40, Total Episode Reward=1545.30
+ Obs shape=(10, 9) Reward=289.58, Total Episode Reward=1834.88
+ Obs shape=(10, 9) Reward=222.09, Total Episode Reward=2056.98
+ Obs shape=(10, 9) Reward=215.11, Total Episode Reward=2272.09
+ Obs shape=(10, 9) Reward=177.28, Total Episode Reward=2449.37
+ Obs shape=(10, 9) Reward=115.87, Total Episode Reward=2565.24
+ Obs shape=(10, 9) Reward=95.09, Total Episode Reward=2660.33
+ Obs shape=(10, 9) Reward=38.50, Total Episode Reward=2698.84
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1698.84
+🏁 Episode 9 ended. Total Reward: 1698.84
+
+--- Saving data after 9 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 10/50 ---
+2026-02-22 09:34:39,727 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=451.66, Total Episode Reward=451.66
+ Obs shape=(10, 9) Reward=434.28, Total Episode Reward=885.93
+ Obs shape=(10, 9) Reward=357.85, Total Episode Reward=1243.78
+ Obs shape=(10, 9) Reward=338.63, Total Episode Reward=1582.41
+ Obs shape=(10, 9) Reward=306.14, Total Episode Reward=1888.55
+ Obs shape=(10, 9) Reward=239.18, Total Episode Reward=2127.73
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1127.73
+🏁 Episode 10 ended. Total Reward: 1127.73
+
+--- Saving data after 10 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 11/50 ---
+2026-02-22 09:35:23,797 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=459.79, Total Episode Reward=459.79
+ Obs shape=(10, 9) Reward=412.39, Total Episode Reward=872.18
+ Obs shape=(10, 9) Reward=363.67, Total Episode Reward=1235.85
+ Obs shape=(10, 9) Reward=328.96, Total Episode Reward=1564.81
+ Obs shape=(10, 9) Reward=283.76, Total Episode Reward=1848.57
+ Obs shape=(10, 9) Reward=277.53, Total Episode Reward=2126.10
+ Obs shape=(10, 9) Reward=234.44, Total Episode Reward=2360.54
+ Obs shape=(10, 9) Reward=183.91, Total Episode Reward=2544.45
+ Obs shape=(10, 9) Reward=158.59, Total Episode Reward=2703.04
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(3, 9) Reward=-1000.00, Total Episode Reward=1703.04
+🏁 Episode 11 ended. Total Reward: 1703.04
+
+--- Saving data after 11 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 12/50 ---
+2026-02-22 09:36:23,199 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=431.24, Total Episode Reward=431.24
+ Obs shape=(10, 9) Reward=437.19, Total Episode Reward=868.43
+ Obs shape=(10, 9) Reward=341.79, Total Episode Reward=1210.21
+ Obs shape=(10, 9) Reward=332.61, Total Episode Reward=1542.82
+ Obs shape=(10, 9) Reward=306.77, Total Episode Reward=1849.59
+ Obs shape=(10, 9) Reward=237.94, Total Episode Reward=2087.53
+ Obs shape=(10, 9) Reward=221.27, Total Episode Reward=2308.80
+ Obs shape=(10, 9) Reward=198.13, Total Episode Reward=2506.93
+ Obs shape=(10, 9) Reward=172.90, Total Episode Reward=2679.83
+ Obs shape=(10, 9) Reward=143.68, Total Episode Reward=2823.51
+ Obs shape=(10, 9) Reward=89.80, Total Episode Reward=2913.31
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1913.31
+🏁 Episode 12 ended. Total Reward: 1913.31
+
+--- Saving data after 12 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 13/50 ---
+2026-02-22 09:37:39,306 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=434.04, Total Episode Reward=434.04
+ Obs shape=(10, 9) Reward=407.80, Total Episode Reward=841.84
+ Obs shape=(10, 9) Reward=363.48, Total Episode Reward=1205.32
+ Obs shape=(10, 9) Reward=316.85, Total Episode Reward=1522.17
+ Obs shape=(10, 9) Reward=278.65, Total Episode Reward=1800.82
+ Obs shape=(10, 9) Reward=239.76, Total Episode Reward=2040.58
+ Obs shape=(10, 9) Reward=207.42, Total Episode Reward=2248.00
+ Obs shape=(10, 9) Reward=160.93, Total Episode Reward=2408.93
+ Obs shape=(10, 9) Reward=119.52, Total Episode Reward=2528.45
+ Obs shape=(10, 9) Reward=72.69, Total Episode Reward=2601.14
+ Obs shape=(10, 9) Reward=53.67, Total Episode Reward=2654.81
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=1654.81
+🏁 Episode 13 ended. Total Reward: 1654.81
+
+--- Saving data after 13 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 14/50 ---
+2026-02-22 09:38:53,726 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=445.88, Total Episode Reward=445.88
+ Obs shape=(10, 9) Reward=425.60, Total Episode Reward=871.48
+ Obs shape=(10, 9) Reward=367.66, Total Episode Reward=1239.14
+ Obs shape=(10, 9) Reward=334.75, Total Episode Reward=1573.89
+ Obs shape=(10, 9) Reward=278.03, Total Episode Reward=1851.93
+ Obs shape=(10, 9) Reward=277.82, Total Episode Reward=2129.74
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1129.74
+🏁 Episode 14 ended. Total Reward: 1129.74
+
+--- Saving data after 14 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 15/50 ---
+2026-02-22 09:39:42,775 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=461.65, Total Episode Reward=461.65
+ Obs shape=(10, 9) Reward=420.88, Total Episode Reward=882.53
+ Obs shape=(10, 9) Reward=368.39, Total Episode Reward=1250.93
+ Obs shape=(10, 9) Reward=345.85, Total Episode Reward=1596.77
+ Obs shape=(10, 9) Reward=302.10, Total Episode Reward=1898.88
+ Obs shape=(10, 9) Reward=235.08, Total Episode Reward=2133.95
+ Obs shape=(10, 9) Reward=222.33, Total Episode Reward=2356.28
+ Obs shape=(10, 9) Reward=199.98, Total Episode Reward=2556.26
+ Obs shape=(10, 9) Reward=154.29, Total Episode Reward=2710.56
+ Obs shape=(10, 9) Reward=128.31, Total Episode Reward=2838.86
+ Obs shape=(10, 9) Reward=65.92, Total Episode Reward=2904.78
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(2, 9) Reward=-1000.00, Total Episode Reward=1904.78
+🏁 Episode 15 ended. Total Reward: 1904.78
+
+--- Saving data after 15 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 16/50 ---
+2026-02-22 09:40:53,419 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=451.64, Total Episode Reward=451.64
+ Obs shape=(10, 9) Reward=433.56, Total Episode Reward=885.21
+ Obs shape=(10, 9) Reward=383.45, Total Episode Reward=1268.66
+ Obs shape=(10, 9) Reward=334.28, Total Episode Reward=1602.93
+ Obs shape=(10, 9) Reward=307.14, Total Episode Reward=1910.07
+ Obs shape=(10, 9) Reward=280.28, Total Episode Reward=2190.35
+ Obs shape=(10, 9) Reward=228.90, Total Episode Reward=2419.25
+ Obs shape=(10, 9) Reward=206.82, Total Episode Reward=2626.07
+ Obs shape=(10, 9) Reward=145.40, Total Episode Reward=2771.47
+ Obs shape=(10, 9) Reward=130.69, Total Episode Reward=2902.16
+ Obs shape=(10, 9) Reward=81.65, Total Episode Reward=2983.81
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(2, 9) Reward=-1000.00, Total Episode Reward=1983.81
+🏁 Episode 16 ended. Total Reward: 1983.81
+
+--- Saving data after 16 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 17/50 ---
+2026-02-22 09:42:16,772 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=468.13, Total Episode Reward=468.13
+ Obs shape=(10, 9) Reward=383.76, Total Episode Reward=851.90
+ Obs shape=(10, 9) Reward=364.31, Total Episode Reward=1216.20
+ Obs shape=(10, 9) Reward=352.57, Total Episode Reward=1568.78
+ Obs shape=(10, 9) Reward=298.42, Total Episode Reward=1867.20
+ Obs shape=(10, 9) Reward=246.17, Total Episode Reward=2113.37
+ Obs shape=(10, 9) Reward=229.53, Total Episode Reward=2342.90
+ Obs shape=(10, 9) Reward=157.16, Total Episode Reward=2500.07
+ Obs shape=(10, 9) Reward=137.08, Total Episode Reward=2637.14
+ Obs shape=(10, 9) Reward=65.08, Total Episode Reward=2702.22
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(2, 9) Reward=-1000.00, Total Episode Reward=1702.22
+🏁 Episode 17 ended. Total Reward: 1702.22
+
+--- Saving data after 17 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 18/50 ---
+2026-02-22 09:43:21,082 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=466.61, Total Episode Reward=466.61
+ Obs shape=(10, 9) Reward=433.17, Total Episode Reward=899.78
+ Obs shape=(10, 9) Reward=392.33, Total Episode Reward=1292.11
+ Obs shape=(10, 9) Reward=349.72, Total Episode Reward=1641.84
+ Obs shape=(10, 9) Reward=297.63, Total Episode Reward=1939.47
+ Obs shape=(10, 9) Reward=239.34, Total Episode Reward=2178.80
+ Obs shape=(10, 9) Reward=230.26, Total Episode Reward=2409.06
+ Obs shape=(10, 9) Reward=186.56, Total Episode Reward=2595.62
+ Obs shape=(10, 9) Reward=131.48, Total Episode Reward=2727.09
+ Obs shape=(10, 9) Reward=88.39, Total Episode Reward=2815.49
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1815.49
+🏁 Episode 18 ended. Total Reward: 1815.49
+
+--- Saving data after 18 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 19/50 ---
+2026-02-22 09:44:18,932 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=439.66, Total Episode Reward=439.66
+ Obs shape=(10, 9) Reward=391.83, Total Episode Reward=831.49
+ Obs shape=(10, 9) Reward=400.16, Total Episode Reward=1231.65
+ Obs shape=(10, 9) Reward=348.15, Total Episode Reward=1579.79
+ Obs shape=(10, 9) Reward=324.74, Total Episode Reward=1904.53
+ Obs shape=(10, 9) Reward=267.75, Total Episode Reward=2172.28
+ Obs shape=(10, 9) Reward=227.54, Total Episode Reward=2399.82
+ Obs shape=(10, 9) Reward=217.16, Total Episode Reward=2616.98
+ Obs shape=(10, 9) Reward=175.78, Total Episode Reward=2792.76
+ Obs shape=(1, 9) Reward=0.00, Total Episode Reward=2792.76
+🏁 Episode 19 ended. Total Reward: 2792.76
+
+--- Saving data after 19 episodes ---
+2026-02-22 09:45:09,472 - student_client.student_gym_env - ERROR - Failed to step episode b4b574a8-19fb-4db5-863e-dcee82cae3bb: Server error '500 Internal Server Error' for url 'http://rlchallenge.orailix.com/api/v1/episode/step'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 20/50 ---
+2026-02-22 09:45:12,255 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=447.77, Total Episode Reward=447.77
+ Obs shape=(10, 9) Reward=429.56, Total Episode Reward=877.33
+ Obs shape=(10, 9) Reward=358.74, Total Episode Reward=1236.07
+ Obs shape=(10, 9) Reward=356.95, Total Episode Reward=1593.02
+ Obs shape=(10, 9) Reward=289.84, Total Episode Reward=1882.86
+ Obs shape=(10, 9) Reward=265.27, Total Episode Reward=2148.13
+ Obs shape=(10, 9) Reward=206.96, Total Episode Reward=2355.08
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1355.08
+🏁 Episode 20 ended. Total Reward: 1355.08
+
+--- Saving data after 20 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 21/50 ---
+2026-02-22 09:45:58,746 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=459.44, Total Episode Reward=459.44
+ Obs shape=(10, 9) Reward=418.65, Total Episode Reward=878.09
+ Obs shape=(10, 9) Reward=369.18, Total Episode Reward=1247.27
+ Obs shape=(10, 9) Reward=336.94, Total Episode Reward=1584.21
+ Obs shape=(10, 9) Reward=315.99, Total Episode Reward=1900.20
+ Obs shape=(10, 9) Reward=253.05, Total Episode Reward=2153.25
+ Obs shape=(10, 9) Reward=205.47, Total Episode Reward=2358.73
+ Obs shape=(10, 9) Reward=178.05, Total Episode Reward=2536.77
+ Obs shape=(10, 9) Reward=130.65, Total Episode Reward=2667.42
+ Obs shape=(10, 9) Reward=93.34, Total Episode Reward=2760.76
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1760.76
+🏁 Episode 21 ended. Total Reward: 1760.76
+
+--- Saving data after 21 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 22/50 ---
+2026-02-22 09:46:59,046 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=452.97, Total Episode Reward=452.97
+ Obs shape=(10, 9) Reward=411.52, Total Episode Reward=864.49
+ Obs shape=(10, 9) Reward=354.03, Total Episode Reward=1218.51
+ Obs shape=(10, 9) Reward=322.27, Total Episode Reward=1540.78
+ Obs shape=(10, 9) Reward=290.40, Total Episode Reward=1831.18
+ Obs shape=(10, 9) Reward=261.76, Total Episode Reward=2092.94
+ Obs shape=(10, 9) Reward=229.09, Total Episode Reward=2322.03
+ Obs shape=(10, 9) Reward=173.01, Total Episode Reward=2495.04
+ Obs shape=(10, 9) Reward=136.00, Total Episode Reward=2631.05
+ Obs shape=(10, 9) Reward=75.81, Total Episode Reward=2706.86
+ Obs shape=(10, 9) Reward=46.70, Total Episode Reward=2753.56
+ Obs shape=(10, 9) Reward=6.52, Total Episode Reward=2760.07
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(2, 9) Reward=-1000.00, Total Episode Reward=1760.07
+🏁 Episode 22 ended. Total Reward: 1760.07
+
+--- Saving data after 22 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 23/50 ---
+2026-02-22 09:48:10,672 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=451.63, Total Episode Reward=451.63
+ Obs shape=(10, 9) Reward=417.82, Total Episode Reward=869.45
+ Obs shape=(10, 9) Reward=369.12, Total Episode Reward=1238.57
+ Obs shape=(10, 9) Reward=333.45, Total Episode Reward=1572.02
+ Obs shape=(10, 9) Reward=299.28, Total Episode Reward=1871.30
+ Obs shape=(10, 9) Reward=239.11, Total Episode Reward=2110.41
+ Obs shape=(10, 9) Reward=209.07, Total Episode Reward=2319.49
+ Obs shape=(10, 9) Reward=195.75, Total Episode Reward=2515.24
+ Obs shape=(10, 9) Reward=143.03, Total Episode Reward=2658.27
+ Obs shape=(10, 9) Reward=105.47, Total Episode Reward=2763.74
+ Obs shape=(10, 9) Reward=77.43, Total Episode Reward=2841.16
+ Obs shape=(10, 9) Reward=32.00, Total Episode Reward=2873.17
+ Obs shape=(10, 9) Reward=9.80, Total Episode Reward=2882.97
+ Obs shape=(10, 9) Reward=-60.92, Total Episode Reward=2822.05
+2026-02-22 09:49:23,470 - student_client.student_gym_env - ERROR - Failed to step episode b4b574a8-19fb-4db5-863e-dcee82cae3bb: Server error '500 Internal Server Error' for url 'http://rlchallenge.orailix.com/api/v1/episode/step'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+ Obs shape=(1, 9) Reward=0.00, Total Episode Reward=2822.05
+🏁 Episode 23 ended. Total Reward: 2822.05
+
+--- Saving data after 23 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 24/50 ---
+2026-02-22 09:49:26,924 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=476.93, Total Episode Reward=476.93
+ Obs shape=(10, 9) Reward=401.65, Total Episode Reward=878.58
+ Obs shape=(10, 9) Reward=385.74, Total Episode Reward=1264.32
+ Obs shape=(10, 9) Reward=333.32, Total Episode Reward=1597.63
+ Obs shape=(10, 9) Reward=291.60, Total Episode Reward=1889.23
+ Obs shape=(10, 9) Reward=268.86, Total Episode Reward=2158.09
+ Obs shape=(10, 9) Reward=248.93, Total Episode Reward=2407.02
+ Obs shape=(10, 9) Reward=201.36, Total Episode Reward=2608.38
+ Obs shape=(10, 9) Reward=151.31, Total Episode Reward=2759.70
+ Obs shape=(10, 9) Reward=148.36, Total Episode Reward=2908.06
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1908.06
+🏁 Episode 24 ended. Total Reward: 1908.06
+
+--- Saving data after 24 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 25/50 ---
+2026-02-22 09:50:25,422 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=451.44, Total Episode Reward=451.44
+ Obs shape=(10, 9) Reward=432.87, Total Episode Reward=884.31
+ Obs shape=(10, 9) Reward=386.22, Total Episode Reward=1270.52
+ Obs shape=(10, 9) Reward=315.28, Total Episode Reward=1585.80
+ Obs shape=(10, 9) Reward=306.04, Total Episode Reward=1891.84
+ Obs shape=(10, 9) Reward=272.87, Total Episode Reward=2164.72
+ Obs shape=(10, 9) Reward=216.64, Total Episode Reward=2381.36
+ Obs shape=(10, 9) Reward=196.12, Total Episode Reward=2577.48
+ Obs shape=(10, 9) Reward=151.37, Total Episode Reward=2728.85
+ Obs shape=(10, 9) Reward=115.06, Total Episode Reward=2843.91
+ Obs shape=(10, 9) Reward=78.47, Total Episode Reward=2922.37
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1922.37
+🏁 Episode 25 ended. Total Reward: 1922.37
+
+--- Saving data after 25 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 26/50 ---
+2026-02-22 09:51:33,787 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=452.56, Total Episode Reward=452.56
+ Obs shape=(10, 9) Reward=425.21, Total Episode Reward=877.77
+ Obs shape=(10, 9) Reward=376.45, Total Episode Reward=1254.22
+ Obs shape=(10, 9) Reward=317.66, Total Episode Reward=1571.88
+ Obs shape=(10, 9) Reward=282.75, Total Episode Reward=1854.63
+ Obs shape=(10, 9) Reward=248.92, Total Episode Reward=2103.55
+ Obs shape=(10, 9) Reward=206.99, Total Episode Reward=2310.55
+ Obs shape=(10, 9) Reward=160.59, Total Episode Reward=2471.14
+ Obs shape=(10, 9) Reward=127.09, Total Episode Reward=2598.23
+ Obs shape=(10, 9) Reward=104.30, Total Episode Reward=2702.53
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1702.53
+🏁 Episode 26 ended. Total Reward: 1702.53
+
+--- Saving data after 26 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 27/50 ---
+2026-02-22 09:52:31,841 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=454.56, Total Episode Reward=454.56
+ Obs shape=(10, 9) Reward=430.55, Total Episode Reward=885.10
+ Obs shape=(10, 9) Reward=362.39, Total Episode Reward=1247.50
+ Obs shape=(10, 9) Reward=306.73, Total Episode Reward=1554.22
+ Obs shape=(10, 9) Reward=311.05, Total Episode Reward=1865.27
+ Obs shape=(10, 9) Reward=258.23, Total Episode Reward=2123.50
+ Obs shape=(10, 9) Reward=193.67, Total Episode Reward=2317.17
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(3, 9) Reward=-1000.00, Total Episode Reward=1317.17
+🏁 Episode 27 ended. Total Reward: 1317.17
+
+--- Saving data after 27 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 28/50 ---
+2026-02-22 09:53:15,565 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=458.41, Total Episode Reward=458.41
+ Obs shape=(10, 9) Reward=426.66, Total Episode Reward=885.07
+ Obs shape=(10, 9) Reward=354.60, Total Episode Reward=1239.66
+ Obs shape=(10, 9) Reward=339.48, Total Episode Reward=1579.15
+ Obs shape=(10, 9) Reward=290.43, Total Episode Reward=1869.58
+ Obs shape=(10, 9) Reward=276.38, Total Episode Reward=2145.96
+ Obs shape=(10, 9) Reward=215.12, Total Episode Reward=2361.09
+ Obs shape=(10, 9) Reward=154.59, Total Episode Reward=2515.67
+ Obs shape=(10, 9) Reward=145.86, Total Episode Reward=2661.53
+ Obs shape=(10, 9) Reward=83.05, Total Episode Reward=2744.58
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1744.58
+🏁 Episode 28 ended. Total Reward: 1744.58
+
+--- Saving data after 28 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 29/50 ---
+2026-02-22 09:55:08,956 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=464.54, Total Episode Reward=464.54
+ Obs shape=(10, 9) Reward=428.15, Total Episode Reward=892.69
+ Obs shape=(10, 9) Reward=369.34, Total Episode Reward=1262.03
+ Obs shape=(10, 9) Reward=348.43, Total Episode Reward=1610.46
+ Obs shape=(10, 9) Reward=307.11, Total Episode Reward=1917.57
+ Obs shape=(10, 9) Reward=248.77, Total Episode Reward=2166.34
+ Obs shape=(10, 9) Reward=240.11, Total Episode Reward=2406.45
+ Obs shape=(10, 9) Reward=197.67, Total Episode Reward=2604.11
+ Obs shape=(10, 9) Reward=152.55, Total Episode Reward=2756.67
+ Obs shape=(10, 9) Reward=129.14, Total Episode Reward=2885.81
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(1, 9) Reward=-1000.00, Total Episode Reward=1885.81
+🏁 Episode 29 ended. Total Reward: 1885.81
+
+--- Saving data after 29 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 30/50 ---
+2026-02-22 09:58:57,314 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=472.52, Total Episode Reward=472.52
+ Obs shape=(10, 9) Reward=414.88, Total Episode Reward=887.40
+ Obs shape=(10, 9) Reward=385.35, Total Episode Reward=1272.75
+ Obs shape=(10, 9) Reward=348.81, Total Episode Reward=1621.56
+ Obs shape=(10, 9) Reward=292.35, Total Episode Reward=1913.91
+ Obs shape=(10, 9) Reward=249.42, Total Episode Reward=2163.32
+ Obs shape=(10, 9) Reward=232.13, Total Episode Reward=2395.45
+ Obs shape=(10, 9) Reward=196.07, Total Episode Reward=2591.53
+ Obs shape=(10, 9) Reward=139.07, Total Episode Reward=2730.59
+ Obs shape=(10, 9) Reward=101.70, Total Episode Reward=2832.29
+ Obs shape=(10, 9) Reward=55.37, Total Episode Reward=2887.66
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1887.66
+🏁 Episode 30 ended. Total Reward: 1887.66
+
+--- Saving data after 30 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 31/50 ---
+2026-02-22 10:03:02,163 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=448.89, Total Episode Reward=448.89
+ Obs shape=(10, 9) Reward=402.57, Total Episode Reward=851.46
+ Obs shape=(10, 9) Reward=365.98, Total Episode Reward=1217.43
+ Obs shape=(10, 9) Reward=337.68, Total Episode Reward=1555.11
+ Obs shape=(10, 9) Reward=328.15, Total Episode Reward=1883.26
+ Obs shape=(10, 9) Reward=274.35, Total Episode Reward=2157.62
+ Obs shape=(10, 9) Reward=201.67, Total Episode Reward=2359.28
+ Obs shape=(10, 9) Reward=221.49, Total Episode Reward=2580.78
+ Obs shape=(10, 9) Reward=149.10, Total Episode Reward=2729.87
+ Obs shape=(10, 9) Reward=125.73, Total Episode Reward=2855.60
+ Obs shape=(10, 9) Reward=78.32, Total Episode Reward=2933.92
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1933.92
+🏁 Episode 31 ended. Total Reward: 1933.92
+
+--- Saving data after 31 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 32/50 ---
+2026-02-22 10:06:58,649 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=490.72, Total Episode Reward=490.72
+ Obs shape=(10, 9) Reward=408.80, Total Episode Reward=899.53
+ Obs shape=(10, 9) Reward=401.93, Total Episode Reward=1301.46
+ Obs shape=(10, 9) Reward=364.53, Total Episode Reward=1665.98
+ Obs shape=(10, 9) Reward=327.36, Total Episode Reward=1993.35
+ Obs shape=(10, 9) Reward=285.38, Total Episode Reward=2278.73
+ Obs shape=(10, 9) Reward=235.84, Total Episode Reward=2514.57
+ Obs shape=(10, 9) Reward=209.49, Total Episode Reward=2724.07
+ Obs shape=(10, 9) Reward=190.88, Total Episode Reward=2914.94
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1914.94
+🏁 Episode 32 ended. Total Reward: 1914.94
+
+--- Saving data after 32 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 33/50 ---
+2026-02-22 10:10:05,811 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=444.31, Total Episode Reward=444.31
+ Obs shape=(10, 9) Reward=407.59, Total Episode Reward=851.90
+ Obs shape=(10, 9) Reward=377.14, Total Episode Reward=1229.04
+ Obs shape=(10, 9) Reward=326.55, Total Episode Reward=1555.59
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(5, 9) Reward=-1000.00, Total Episode Reward=555.59
+🏁 Episode 33 ended. Total Reward: 555.59
+
+--- Saving data after 33 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 34/50 ---
+2026-02-22 10:11:58,944 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=453.96, Total Episode Reward=453.96
+ Obs shape=(10, 9) Reward=404.90, Total Episode Reward=858.86
+ Obs shape=(10, 9) Reward=387.86, Total Episode Reward=1246.73
+ Obs shape=(10, 9) Reward=335.73, Total Episode Reward=1582.45
+ Obs shape=(10, 9) Reward=296.33, Total Episode Reward=1878.78
+ Obs shape=(10, 9) Reward=282.41, Total Episode Reward=2161.20
+ Obs shape=(10, 9) Reward=241.10, Total Episode Reward=2402.30
+ Obs shape=(10, 9) Reward=205.28, Total Episode Reward=2607.58
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1607.58
+🏁 Episode 34 ended. Total Reward: 1607.58
+
+--- Saving data after 34 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 35/50 ---
+2026-02-22 10:14:49,251 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=455.48, Total Episode Reward=455.48
+ Obs shape=(10, 9) Reward=425.36, Total Episode Reward=880.84
+ Obs shape=(10, 9) Reward=353.58, Total Episode Reward=1234.42
+ Obs shape=(10, 9) Reward=318.90, Total Episode Reward=1553.33
+ Obs shape=(10, 9) Reward=285.73, Total Episode Reward=1839.06
+ Obs shape=(10, 9) Reward=239.12, Total Episode Reward=2078.18
+ Obs shape=(10, 9) Reward=214.61, Total Episode Reward=2292.79
+ Obs shape=(10, 9) Reward=152.23, Total Episode Reward=2445.02
+ Obs shape=(10, 9) Reward=129.64, Total Episode Reward=2574.66
+ Obs shape=(10, 9) Reward=89.22, Total Episode Reward=2663.88
+ Obs shape=(10, 9) Reward=50.08, Total Episode Reward=2713.95
+ Obs shape=(10, 9) Reward=1.49, Total Episode Reward=2715.44
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1715.44
+🏁 Episode 35 ended. Total Reward: 1715.44
+
+--- Saving data after 35 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 36/50 ---
+2026-02-22 10:18:37,947 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=461.26, Total Episode Reward=461.26
+ Obs shape=(10, 9) Reward=432.70, Total Episode Reward=893.96
+ Obs shape=(10, 9) Reward=391.05, Total Episode Reward=1285.01
+ Obs shape=(10, 9) Reward=329.08, Total Episode Reward=1614.08
+ Obs shape=(10, 9) Reward=315.70, Total Episode Reward=1929.78
+ Obs shape=(10, 9) Reward=264.46, Total Episode Reward=2194.25
+ Obs shape=(10, 9) Reward=237.96, Total Episode Reward=2432.21
+ Obs shape=(10, 9) Reward=187.59, Total Episode Reward=2619.80
+ Obs shape=(10, 9) Reward=139.05, Total Episode Reward=2758.85
+ Obs shape=(10, 9) Reward=103.30, Total Episode Reward=2862.15
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1862.15
+🏁 Episode 36 ended. Total Reward: 1862.15
+
+--- Saving data after 36 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 37/50 ---
+2026-02-22 10:22:12,185 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=453.36, Total Episode Reward=453.36
+ Obs shape=(10, 9) Reward=424.71, Total Episode Reward=878.07
+ Obs shape=(10, 9) Reward=371.99, Total Episode Reward=1250.06
+ Obs shape=(10, 9) Reward=340.54, Total Episode Reward=1590.60
+ Obs shape=(10, 9) Reward=308.66, Total Episode Reward=1899.26
+ Obs shape=(10, 9) Reward=277.56, Total Episode Reward=2176.82
+ Obs shape=(10, 9) Reward=217.02, Total Episode Reward=2393.84
+ Obs shape=(10, 9) Reward=179.06, Total Episode Reward=2572.90
+ Obs shape=(10, 9) Reward=132.33, Total Episode Reward=2705.23
+ Obs shape=(10, 9) Reward=110.80, Total Episode Reward=2816.03
+ Obs shape=(10, 9) Reward=75.11, Total Episode Reward=2891.14
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=1891.14
+🏁 Episode 37 ended. Total Reward: 1891.14
+
+--- Saving data after 37 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 38/50 ---
+2026-02-22 10:26:08,988 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=455.63, Total Episode Reward=455.63
+ Obs shape=(10, 9) Reward=413.56, Total Episode Reward=869.19
+ Obs shape=(10, 9) Reward=356.86, Total Episode Reward=1226.05
+ Obs shape=(10, 9) Reward=324.87, Total Episode Reward=1550.92
+ Obs shape=(10, 9) Reward=269.32, Total Episode Reward=1820.24
+ Obs shape=(10, 9) Reward=255.82, Total Episode Reward=2076.06
+ Obs shape=(10, 9) Reward=210.65, Total Episode Reward=2286.71
+ Obs shape=(10, 9) Reward=184.53, Total Episode Reward=2471.24
+ Obs shape=(10, 9) Reward=154.52, Total Episode Reward=2625.76
+ Obs shape=(10, 9) Reward=113.67, Total Episode Reward=2739.43
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(3, 9) Reward=-1000.00, Total Episode Reward=1739.43
+🏁 Episode 38 ended. Total Reward: 1739.43
+
+--- Saving data after 38 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 39/50 ---
+2026-02-22 10:29:24,188 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=469.27, Total Episode Reward=469.27
+ Obs shape=(10, 9) Reward=414.01, Total Episode Reward=883.29
+ Obs shape=(10, 9) Reward=372.59, Total Episode Reward=1255.87
+ Obs shape=(10, 9) Reward=317.10, Total Episode Reward=1572.98
+ Obs shape=(10, 9) Reward=286.82, Total Episode Reward=1859.80
+ Obs shape=(10, 9) Reward=275.69, Total Episode Reward=2135.49
+ Obs shape=(10, 9) Reward=222.75, Total Episode Reward=2358.24
+ Obs shape=(10, 9) Reward=179.43, Total Episode Reward=2537.67
+ Obs shape=(10, 9) Reward=125.63, Total Episode Reward=2663.30
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1663.30
+🏁 Episode 39 ended. Total Reward: 1663.30
+
+--- Saving data after 39 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 40/50 ---
+2026-02-22 10:32:20,587 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=436.98, Total Episode Reward=436.98
+ Obs shape=(10, 9) Reward=437.68, Total Episode Reward=874.66
+ Obs shape=(10, 9) Reward=386.05, Total Episode Reward=1260.71
+ Obs shape=(10, 9) Reward=351.72, Total Episode Reward=1612.43
+ Obs shape=(10, 9) Reward=294.43, Total Episode Reward=1906.87
+ Obs shape=(10, 9) Reward=254.28, Total Episode Reward=2161.14
+ Obs shape=(10, 9) Reward=207.13, Total Episode Reward=2368.27
+ Obs shape=(10, 9) Reward=181.87, Total Episode Reward=2550.14
+ Obs shape=(10, 9) Reward=121.62, Total Episode Reward=2671.75
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1671.75
+🏁 Episode 40 ended. Total Reward: 1671.75
+
+--- Saving data after 40 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 41/50 ---
+2026-02-22 10:35:33,980 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=443.61, Total Episode Reward=443.61
+ Obs shape=(10, 9) Reward=406.30, Total Episode Reward=849.91
+ Obs shape=(10, 9) Reward=382.03, Total Episode Reward=1231.94
+ Obs shape=(10, 9) Reward=331.03, Total Episode Reward=1562.96
+ Obs shape=(10, 9) Reward=277.34, Total Episode Reward=1840.31
+ Obs shape=(10, 9) Reward=256.06, Total Episode Reward=2096.37
+ Obs shape=(10, 9) Reward=218.68, Total Episode Reward=2315.04
+ Obs shape=(10, 9) Reward=183.24, Total Episode Reward=2498.28
+ Obs shape=(10, 9) Reward=133.04, Total Episode Reward=2631.31
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=1631.31
+🏁 Episode 41 ended. Total Reward: 1631.31
+
+--- Saving data after 41 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 42/50 ---
+2026-02-22 10:38:59,798 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=459.93, Total Episode Reward=459.93
+ Obs shape=(10, 9) Reward=413.00, Total Episode Reward=872.93
+ Obs shape=(10, 9) Reward=365.83, Total Episode Reward=1238.75
+ Obs shape=(10, 9) Reward=367.25, Total Episode Reward=1606.01
+ Obs shape=(10, 9) Reward=268.69, Total Episode Reward=1874.70
+ Obs shape=(10, 9) Reward=261.70, Total Episode Reward=2136.40
+ Obs shape=(10, 9) Reward=199.75, Total Episode Reward=2336.15
+ Obs shape=(10, 9) Reward=194.09, Total Episode Reward=2530.24
+ Obs shape=(10, 9) Reward=125.04, Total Episode Reward=2655.28
+ Obs shape=(10, 9) Reward=73.09, Total Episode Reward=2728.37
+ Obs shape=(10, 9) Reward=29.60, Total Episode Reward=2757.98
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1757.98
+🏁 Episode 42 ended. Total Reward: 1757.98
+
+--- Saving data after 42 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 43/50 ---
+2026-02-22 10:42:59,773 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=452.25, Total Episode Reward=452.25
+ Obs shape=(10, 9) Reward=430.06, Total Episode Reward=882.31
+ Obs shape=(10, 9) Reward=385.79, Total Episode Reward=1268.10
+ Obs shape=(10, 9) Reward=353.59, Total Episode Reward=1621.69
+ Obs shape=(10, 9) Reward=302.29, Total Episode Reward=1923.98
+ Obs shape=(10, 9) Reward=257.13, Total Episode Reward=2181.11
+ Obs shape=(10, 9) Reward=238.05, Total Episode Reward=2419.16
+ Obs shape=(10, 9) Reward=184.46, Total Episode Reward=2603.61
+ Obs shape=(10, 9) Reward=155.52, Total Episode Reward=2759.13
+ Obs shape=(10, 9) Reward=84.38, Total Episode Reward=2843.51
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(8, 9) Reward=-1000.00, Total Episode Reward=1843.51
+🏁 Episode 43 ended. Total Reward: 1843.51
+
+--- Saving data after 43 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 44/50 ---
+2026-02-22 10:45:57,440 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=453.47, Total Episode Reward=453.47
+ Obs shape=(10, 9) Reward=426.62, Total Episode Reward=880.09
+ Obs shape=(10, 9) Reward=361.84, Total Episode Reward=1241.92
+ Obs shape=(10, 9) Reward=334.15, Total Episode Reward=1576.07
+ Obs shape=(10, 9) Reward=326.54, Total Episode Reward=1902.61
+ Obs shape=(10, 9) Reward=260.42, Total Episode Reward=2163.03
+ Obs shape=(10, 9) Reward=238.39, Total Episode Reward=2401.42
+ Obs shape=(10, 9) Reward=191.90, Total Episode Reward=2593.31
+ Obs shape=(10, 9) Reward=168.09, Total Episode Reward=2761.41
+ Obs shape=(10, 9) Reward=118.56, Total Episode Reward=2879.96
+ Obs shape=(10, 9) Reward=73.25, Total Episode Reward=2953.22
+ Obs shape=(10, 9) Reward=58.18, Total Episode Reward=3011.40
+ Obs shape=(10, 9) Reward=-13.73, Total Episode Reward=2997.67
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1997.67
+🏁 Episode 44 ended. Total Reward: 1997.67
+
+--- Saving data after 44 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 45/50 ---
+2026-02-22 10:50:44,778 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=458.98, Total Episode Reward=458.98
+ Obs shape=(10, 9) Reward=427.17, Total Episode Reward=886.15
+ Obs shape=(10, 9) Reward=367.64, Total Episode Reward=1253.79
+ Obs shape=(10, 9) Reward=312.74, Total Episode Reward=1566.53
+ Obs shape=(10, 9) Reward=281.12, Total Episode Reward=1847.65
+ Obs shape=(10, 9) Reward=237.58, Total Episode Reward=2085.23
+ Obs shape=(10, 9) Reward=237.23, Total Episode Reward=2322.46
+ Obs shape=(10, 9) Reward=183.60, Total Episode Reward=2506.06
+ Obs shape=(10, 9) Reward=122.04, Total Episode Reward=2628.10
+ Obs shape=(10, 9) Reward=106.48, Total Episode Reward=2734.58
+ Obs shape=(10, 9) Reward=55.42, Total Episode Reward=2790.00
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1790.00
+🏁 Episode 45 ended. Total Reward: 1790.00
+
+--- Saving data after 45 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 46/50 ---
+2026-02-22 10:53:52,727 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=481.59, Total Episode Reward=481.59
+ Obs shape=(10, 9) Reward=384.12, Total Episode Reward=865.70
+ Obs shape=(10, 9) Reward=369.08, Total Episode Reward=1234.79
+ Obs shape=(10, 9) Reward=333.12, Total Episode Reward=1567.91
+ Obs shape=(10, 9) Reward=299.14, Total Episode Reward=1867.05
+ Obs shape=(10, 9) Reward=241.94, Total Episode Reward=2108.99
+ Obs shape=(10, 9) Reward=194.31, Total Episode Reward=2303.29
+ Obs shape=(10, 9) Reward=173.25, Total Episode Reward=2476.54
+ Obs shape=(10, 9) Reward=157.76, Total Episode Reward=2634.30
+ Obs shape=(10, 9) Reward=78.89, Total Episode Reward=2713.19
+ Obs shape=(10, 9) Reward=79.95, Total Episode Reward=2793.14
+2026-02-22 10:57:01,901 - student_client.student_gym_env - ERROR - Failed to step episode b4b574a8-19fb-4db5-863e-dcee82cae3bb: Server error '500 Internal Server Error' for url 'http://rlchallenge.orailix.com/api/v1/episode/step'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+ Obs shape=(1, 9) Reward=0.00, Total Episode Reward=2793.14
+🏁 Episode 46 ended. Total Reward: 2793.14
+
+--- Saving data after 46 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 47/50 ---
+2026-02-22 10:57:18,696 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=464.36, Total Episode Reward=464.36
+ Obs shape=(10, 9) Reward=421.15, Total Episode Reward=885.51
+ Obs shape=(10, 9) Reward=395.78, Total Episode Reward=1281.29
+ Obs shape=(10, 9) Reward=322.34, Total Episode Reward=1603.64
+ Obs shape=(10, 9) Reward=298.29, Total Episode Reward=1901.92
+ Obs shape=(10, 9) Reward=245.76, Total Episode Reward=2147.69
+ Obs shape=(10, 9) Reward=209.08, Total Episode Reward=2356.76
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(6, 9) Reward=-1000.00, Total Episode Reward=1356.76
+🏁 Episode 47 ended. Total Reward: 1356.76
+
+--- Saving data after 47 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 48/50 ---
+2026-02-22 10:59:58,702 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=465.36, Total Episode Reward=465.36
+ Obs shape=(10, 9) Reward=416.40, Total Episode Reward=881.76
+ Obs shape=(10, 9) Reward=379.59, Total Episode Reward=1261.34
+ Obs shape=(10, 9) Reward=336.42, Total Episode Reward=1597.77
+ Obs shape=(10, 9) Reward=298.67, Total Episode Reward=1896.44
+ Obs shape=(10, 9) Reward=262.14, Total Episode Reward=2158.58
+ Obs shape=(10, 9) Reward=231.87, Total Episode Reward=2390.46
+ Obs shape=(10, 9) Reward=203.14, Total Episode Reward=2593.60
+ Obs shape=(10, 9) Reward=151.56, Total Episode Reward=2745.16
+ Obs shape=(10, 9) Reward=114.29, Total Episode Reward=2859.45
+ Obs shape=(10, 9) Reward=68.54, Total Episode Reward=2927.98
+ Obs shape=(10, 9) Reward=53.00, Total Episode Reward=2980.99
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(4, 9) Reward=-1000.00, Total Episode Reward=1980.99
+🏁 Episode 48 ended. Total Reward: 1980.99
+
+--- Saving data after 48 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 49/50 ---
+2026-02-22 11:03:48,499 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=448.44, Total Episode Reward=448.44
+ Obs shape=(10, 9) Reward=441.79, Total Episode Reward=890.22
+ Obs shape=(10, 9) Reward=386.83, Total Episode Reward=1277.05
+ Obs shape=(10, 9) Reward=357.50, Total Episode Reward=1634.55
+ Obs shape=(10, 9) Reward=307.92, Total Episode Reward=1942.47
+ Obs shape=(10, 9) Reward=247.84, Total Episode Reward=2190.31
+ Obs shape=(10, 9) Reward=210.38, Total Episode Reward=2400.69
+ Obs shape=(10, 9) Reward=205.62, Total Episode Reward=2606.31
+ Obs shape=(10, 9) Reward=144.76, Total Episode Reward=2751.07
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(7, 9) Reward=-1000.00, Total Episode Reward=1751.07
+🏁 Episode 49 ended. Total Reward: 1751.07
+
+--- Saving data after 49 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
+
+--- Episode 50/50 ---
+2026-02-22 11:06:45,078 - student_client.student_gym_env - INFO - Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reset successfully
+ Obs shape=(10, 9) Reward=466.01, Total Episode Reward=466.01
+ Obs shape=(10, 9) Reward=436.07, Total Episode Reward=902.08
+ Obs shape=(10, 9) Reward=381.11, Total Episode Reward=1283.19
+ Obs shape=(10, 9) Reward=347.21, Total Episode Reward=1630.41
+ Obs shape=(10, 9) Reward=318.96, Total Episode Reward=1949.37
+ Obs shape=(10, 9) Reward=254.94, Total Episode Reward=2204.31
+ Obs shape=(10, 9) Reward=274.96, Total Episode Reward=2479.27
+ Obs shape=(10, 9) Reward=189.70, Total Episode Reward=2668.97
+ Obs shape=(10, 9) Reward=152.31, Total Episode Reward=2821.28
+Episode b4b574a8-19fb-4db5-863e-dcee82cae3bb reached termination state, reason: failure
+ Obs shape=(9, 9) Reward=-1000.00, Total Episode Reward=1821.28
+🏁 Episode 50 ended. Total Reward: 1821.28
+
+--- Saving data after 50 episodes ---
+Data saved to collected_data/006_observations.npy, collected_data/006_rewards.npy, and collected_data/006_steps.npy
